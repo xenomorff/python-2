@@ -14,6 +14,7 @@ class Player():
         self.wisdom = roll('3,6')
     
     def show_stats(self):
+        print(c.red)
         text = '''
         Strength: {s.strength:>2}
         Vitality: {s.vitality:>2}
