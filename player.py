@@ -26,8 +26,8 @@ class Player():
         
         
 if __name__ == '__main__':
-    for count in range(5):
-        time.sleep(1)
+    for count in range(100):
+        time.sleep(.5)
         print(c.clear)
         player = Player()
         player.show_stats()
