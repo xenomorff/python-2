@@ -6,7 +6,6 @@ import random
 import time
 
 class Player():
-
     def __init__(self):
         self.strength = roll('3,6')
         self.vitality = roll('3,6')
@@ -31,7 +30,6 @@ if __name__ == '__main__':
         print(c.clear)
         player = Player()
         player.show_stats()
-        print(Player)
 
 
 
