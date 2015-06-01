@@ -15,7 +15,7 @@ class Game():
        while True:
             self.player.show_stats()
             # TODO SHOW MONSTER STATS
-            action = input('What do you want to do? ')
+            action = input('What do you want to do?')
             
 if __name__ == '__main__':
     agame = Game()
