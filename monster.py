@@ -1,21 +1,24 @@
 " hello "
 
-from dice import roll
+from interfaces import HasStats
 
-class Monster():
-    health = 100
+monsters = ['Shrek','Donkey']
+
+
+class Shrek(HasStats):
     def __init__(self):
-        self.attack = roll('3,6')
-        self.speed = roll('3,6')
-    
-    def show_stats(self):
-        text = '''
-        attack:     {s.attack}
-        speed:      {s.speed}
-        '''
-        print(text.format(s=self))
+        self.set_stats()
+        self.strength += 5
 
-if __name__ ==' __main__':    
-    monster = Monster()
-    monster.show_stats()
+class Donkey(HasStats):
+    def __init__(self):
+        self.set_stats()
+        self.speed += 5
+
+
+
+if __name__ ==' __main__':
+    while True:
+        monster = Monster()
+        monster.show_stats()
     
