@@ -16,8 +16,9 @@ class Game():
         while True:
            # self.player.show_stats()
             # TODO SHOW MONSTER STATS
-            action = input('What do you want to do? >>> ')
+            action = input(c.violet+'What do you want to do? '+c.base3+'>>> ')
             print(c.clear)
+            print(c.reset)
             if action == 'stats':
                 self.player.show_stats()
             elif action == 'save':
@@ -34,10 +35,11 @@ class Game():
         for monster in m.monsters:
             print((c.base3+ "{}. "+c.green+"{}" +c.reset).format(count, monster))
             count += 1
-        print('1,2')
+        print(c.red+'PICK: 1 , 2')
+        print(c.reset)
         number = int(input().strip().lower())
         monster_name = m.monsters[number -1]
-        print("You have chosen", monster_name)
+        print(c.blue+"You have chosen", monster_name)
 
     def save(self):
         print('Did not save')
