@@ -2,24 +2,28 @@
 
 from interfaces import HasStats
 import random
-monsters = ['Shrek','Donkey']
 
 
 class Shrek(HasStats):
+    title = "The God Of All Gods"
     def __init__(self):
         self.set_stats()
         self.strength += 5
-        self.title = self.__class__.__name__
+       
+
 class Donkey(HasStats):
+    title = "The Prince Of All Princes"
     def __init__(self):
         self.set_stats()
         self.speed += 5
-        self.title = self.__class__.__name__
+        
 
-monsters = ['Shrek','Donkey']
+monsters = [Shrek,
+            Donkey
+]
 
-
-if __name__ ==' __main__':
+if __name__ ==' __main__': 
     one_Shrek = Shrek()
     one_Shrek.show_stats
+    one_Shrek.title
 

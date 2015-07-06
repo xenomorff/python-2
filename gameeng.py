@@ -33,13 +33,18 @@ class Game():
     def pick(self):
         count = 1
         for monster in m.monsters:
-            print((c.base3+ "{}. "+c.green+"{}" +c.reset).format(count, monster))
+            print((c.base3+ "{}. "+c.green+"{}" +c.reset).format(count, monster.title))
             count += 1
         print(c.red+'PICK: 1 , 2')
         print(c.reset)
         number = int(input().strip().lower())
-        monster_name = m.monsters[number -1]
-        print(c.blue+"You have chosen", monster_name)
+        monster_class = m.monsters[number -1]
+        monster = monster_class()
+        print("you picked {}:".format(monster.title))
+        monster.show_stats()
+    
+        
+           
 
     def save(self):
         print('Did not save')
