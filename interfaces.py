@@ -29,7 +29,7 @@ class HasStats():
 
 
     def save(self):
-        with open('player.json', 'w') as pfile:
+        with open('player.dat', 'w') as pfile:
             pfile.write(json.dumps({
             "strength": self.strength,
             "speed": self.speed,
@@ -38,7 +38,7 @@ class HasStats():
             }))
 
     def load(self):
-        with open('player.json', 'r') as pfile:
+        with open('player.dat', 'r') as pfile:
             j = json.load(pfile)
             self.strength = j['strength']
             self.speed = j['speed']

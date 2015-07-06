@@ -30,6 +30,8 @@ class Game():
                 exit()
             elif action in ['pick','choose']:
                 self.pick()
+            elif action in ['fight','battle']:
+                self.handle_battle
 
     def pick(self):
         count = 1
@@ -45,7 +47,9 @@ class Game():
         monster.show_stats()
     
         
-           
+    def handle_battle(self):
+        # who goes first
+        # attack defend pass
 
     def save(self):
         self.player.save()
