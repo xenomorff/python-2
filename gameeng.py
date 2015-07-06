@@ -10,9 +10,10 @@ class Game():
      
     def __init__(self):
         self.player = Player()
-        #TODO MONSTER
+        self.player.load()
 
     def run(self):
+        self.player.show_stats()
         while True:
            # self.player.show_stats()
             # TODO SHOW MONSTER STATS
@@ -40,19 +41,21 @@ class Game():
         number = int(input().strip().lower())
         monster_class = m.monsters[number -1]
         monster = monster_class()
-        print("you picked {}:".format(monster.title))
+        print(c.red + "You picked {}:".format(monster.title))
         monster.show_stats()
     
         
            
 
     def save(self):
-        print('Did not save')
+        self.player.save()
 
+            
     
 
 
 if __name__ == '__main__':
     agame = Game()
     agame.run()
+
 
